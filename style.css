@@ -1,0 +1,129 @@
+/* RESET */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* VARIABLES */
+
+:root {
+    --container-bg: rgba(255, 255, 255, 0.75);
+    --container-border: rgba(255, 255, 255, 0.01);
+    --container-bg-light: rgba(255, 255, 255, 0.3);
+    --container-border-light: rgba(255, 255, 255, 0.34);
+
+    --shadow-color: rgba(35, 35, 35, 0.1);
+
+    --button-bg: rgba(255, 255, 255, 0.75);
+    --button-active-bg: gray;
+
+    --operator-bg: yellowgreen;
+    --operator-color: #fff;
+
+    --text-color: #232323;
+    --hover-color: white;
+    --active-color: black;
+}
+
+/* CONTAINER */
+
+.container {
+    background: var(--container-bg-light);
+    border: 1px solid var(--container-border-light);
+    border-radius: 1rem;
+    box-shadow: 0 4px 30px var(--shadow-color);
+    color: var(--text-color);
+    flex-basis: 400px;
+    height: 540px;
+    padding: 20px 35px;
+}
+
+/* SCREEN */
+
+.screen {
+    background: var(--container-bg);
+    border: 1px solid var(--container-border);
+    border-radius: 1rem;
+    box-shadow: 0 4px 30px var(--shadow-color);
+    color: var(--text-color);
+    font-size: 35px;
+    overflow: auto;
+    padding: 20px;
+    text-align: right;
+    width: 326px;
+}
+
+/* CALC BUTTON ROW */
+
+.calc-btn-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+}
+
+/* CALC BUTTON */
+
+.calc-btn {
+    background: var(--button-bg);
+    border: 1px solid var(--container-border);
+    border-radius: 1rem;
+    box-shadow: 0 4px 30px var(--shadow-color);
+    color: var(--text-color);
+    flex-basis: 20%;
+    font-family: inherit;
+    font-size: 24px;
+    height: 65px;
+
+    transition: background-color 0.3s;
+}
+
+.calc-btn:hover {
+    background-color: inherit;
+    color: var(--hover-color);
+}
+
+.calc-btn:active {
+    background-color: var(--button-active-bg);
+    color: var(--active-color);
+}
+
+/* OPERATORS */
+
+.calc-btn:last-child {
+    background-color: var(--operator-bg);
+    color: var(--operator-color);
+}
+
+.calc-btn:last-child:hover {
+    background-color: inherit;
+    color: var(--hover-color);
+}
+
+.calc-btn:last-child:active {
+    background-color: var(--button-active-bg);
+    color: var(--active-color);
+}
+
+/* BUTTON SPACES */
+
+.double {
+    flex-basis: 47%;
+}
+
+.triple {
+    flex-basis: 73%;
+}
